@@ -1,0 +1,34 @@
+.faq-container {
+    margin: 20px;
+  }
+  
+  .faq-item {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  .faq-question {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .faq-answer {
+    display: none;
+  }
+  
+  .faq-item.active .faq-answer {
+    display: block;
+  }
+  
+  .faq-question::after {
+    content: "\25BC"; /* Unicode para seta para baixo */
+    font-size: 16px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .faq-item.active .faq-question::after {
+    transform: rotate(180deg);
+  }
